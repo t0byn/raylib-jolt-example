@@ -182,8 +182,9 @@ set(CMAKE_EXE_LINKER_FLAGS_DISTRIBUTION "${CMAKE_EXE_LINKER_FLAGS_RELEASE}")
 SET_INTERPROCEDURAL_OPTIMIZATION()
 
 # Compile the Jolt-raylib-example application
-add_executable(Example src/main.cpp)
+add_executable(Example src/main.cpp raygui/src/raygui.h)
 target_include_directories(Example PUBLIC ${JoltPhysics_SOURCE_DIR}/..)
+target_include_directories(Example PUBLIC raygui/src)
 target_link_libraries(Example Jolt raylib)
 
 # Make this project the startup project
