@@ -4,3 +4,6 @@
 [submodule "JoltPhysics"]
 	path = JoltPhysics
 	url = https://github.com/jrouwe/JoltPhysics.git
+[submodule "raygui"]
+	path = raygui
+	url = https://github.com/raysan5/raygui.git
