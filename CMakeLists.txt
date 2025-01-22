@@ -49,6 +49,9 @@ set(USE_TZCNT ON)
 set(USE_F16C ON)
 set(USE_FMADD ON)
 
+# Include Jolt
+add_subdirectory(JoltPhysics/Build)
+
 # Requires C++ 17
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -168,9 +171,6 @@ else()
 	endif()
 	set(CMAKE_CXX_FLAGS_DISTRIBUTION "${CMAKE_CXX_FLAGS_RELEASE}")
 endif()
-
-# Include Jolt
-add_subdirectory(JoltPhysics/Build)
 
 # Include raylib
 add_subdirectory(raylib)
